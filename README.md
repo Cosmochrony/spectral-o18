@@ -14,10 +14,10 @@ final structural gap left by **O17**:
 
 - conjugate Weil blocks $(c, q-c)$ carry identical dynamics
 - the pair observable  
-  $\sigma_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n)$  
+  $\sigma_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n)$
   is the correct physical observable
 - the exponent doubling  
-  $\delta_{\mathrm{pair}} = 2\,\delta_c$  
+  $\delta_{\mathrm{pair}} = 2\,\delta_c$
   is structurally derived
 
 However, O17 left one fundamental open problem:
@@ -40,14 +40,11 @@ The paper derives the **minimal fibre structure of Π from first principles**.
 It proves that:
 
 - the Born–Infeld action is even:
-  $  S[\chi] = S[-\chi]
-  $
+  $S[\chi] = S[-\chi]$
 - this implies BI-indiscernability of configurations:
-  $  \chi \sim -\chi
-  $
+  $\chi \sim -\chi$
 - therefore every fibre contains the involution:
-  $  \{\chi, -\chi\}
-  $
+  $\{\chi, -\chi\}$
 
 Under a minimality assumption:
 
@@ -56,8 +53,7 @@ Under a minimality assumption:
 Finally, in the Weil realisation:
 
 - the involution is identified with:
-  $  c \leftrightarrow q-c
-  $
+  $c \leftrightarrow q-c$
 
 Thus, conjugate pairs are no longer a hypothesis:
 
@@ -70,16 +66,13 @@ Thus, conjugate pairs are no longer a hypothesis:
 
 The action satisfies:
 
-$  S_{\mathrm{BI}}[-\chi] = S_{\mathrm{BI}}[\chi]
-$
+$S_{\mathrm{BI}}[-\chi] = S_{\mathrm{BI}}[\chi]$
 
 because it depends only on:
 
-$  F^2 = (D\chi)^2
-$
+$F^2 = (D\chi)^2$
 
 This establishes a fundamental symmetry at the χ-level.
-
 
 ## 2. BI-indiscernability
 
@@ -90,26 +83,22 @@ A notion of physical indistinguishability is defined:
 
 This implies:
 
-$  \chi \sim -\chi
-$
+$\chi \sim -\chi$
 
 Therefore:
 
 > the projection Π must identify parity-related configurations.
-
 
 ## 3. Fibre constraint
 
 From BI-indiscernability:
 
 - every fibre satisfies:
-  $  \{\chi, -\chi\} \subset \Pi^{-1}(y)
-  $
+  $\{\chi, -\chi\} \subset \Pi^{-1}(y)$
 
 Thus:
 
 > parity is necessarily contained in every fibre.
-
 
 ## 4. Conditional minimality
 
@@ -120,14 +109,12 @@ Under the assumption:
 it follows that:
 
 - the minimal fibre is exactly:
-  $  \{\chi, -\chi\}
-  $
+  $\{\chi, -\chi\}$
 
 Any larger identification would:
 
 - either introduce additional symmetry
 - or be unstable under admissible perturbations
-
 
 ## 5. Weil-level realisation
 
@@ -138,8 +125,7 @@ Using O17:
 
 This identifies:
 
-$  \chi \leftrightarrow c,\quad -\chi \leftrightarrow q-c
-$
+$\chi \leftrightarrow c,\quad -\chi \leftrightarrow q-c$
 
 Therefore:
 
@@ -252,7 +238,6 @@ The main remaining questions are:
 4. **Beyond minimal fibres**  
    Classify fibres in enriched frameworks with additional symmetries
 
-
 # Status
 
 The programme is now:
@@ -282,8 +267,7 @@ If you reference this work, please cite:
 
 J. Beau,
 Minimal Fibre Structure of the Non-Injective Projection from Born–Infeld Indiscernability:
-Derivation of the Parity Involution,
-Zenodo, 2026.
+Derivation of the Parity Involution, Zenodo, 2026.
 
 # Acknowledgements
 
