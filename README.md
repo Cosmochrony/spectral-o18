@@ -1,6 +1,6 @@
 This repository contains the source of the **O18** Cosmochrony paper  
-[*Minimal Fibre Structure of the Non-Injective Projection from Born–Infeld Indiscernability:
-Derivation of the Parity Involution*](out/SpectralO18.pdf).
+*Minimal Fibre Structure of the Non-Injective Projection from Born–Infeld Indiscernability:
+Derivation of the Parity Involution*.
 
 This work extends the **spectral admissibility sub-programme** by resolving the
 final structural gap left by **O17**:
