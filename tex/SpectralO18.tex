@@ -12,6 +12,7 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
 
 % ---------- notation shortcuts ----------
 \newcommand{\bstar}{\beta^{*}}
@@ -28,9 +29,8 @@
 
 
 \title{%
-  Minimal Fibre Structure of the Non-Injective Projection\\
-  from Born--Infeld Indiscernability:\\
-  Derivation of the Parity Involution\\[4pt]
+  Equivariant Born--Infeld Parity and the Fibre-Identification Problem\\
+  of the Non-Injective Projection\\[4pt]
   \large O18 --- Spectral Admissibility Sub-programme%
 }
 \author{J.~Beau\\[2pt]
@@ -45,27 +45,34 @@
     non-injective projection $\Proj:\chifield\to\Obs$ was stated as a structurally motivated
     hypothesis in O16~\cite{Beau2026a20} and used in O17~\cite{Beau2026a21} to derive the
     pair-level observable and the exponent doubling $\dpair = 2\,\delta_{c} \approx 7.44$.
-    The present paper provides the foundational derivation of the underlying involution.
-    We proceed in two stages.
-    At the abstract level, we show that the Born--Infeld action $S[\chifield]$ is even in
-    $\chifield$, and we define a notion of \emph{BI-indiscernability} for configurations that
-    produce identical effective responses under all BI-admissible perturbations.
-    Evenness of $S$ immediately implies that $\chifield$ and $-\chifield$ are BI-indiscernible,
-    so every projective fibre contains the orbit $\{\chifield, -\chifield\}$.
-    We then prove a conditional minimality result: in the absence of any symmetry of
-    $S[\chifield]$ beyond its parity, the minimal fibre is exactly the involution
-    $\chifield\mapsto-\chifield$.
-    At the concrete level, the O17 result $\rhoqc = \overline{\rhoc}$ together with the
-    norm-invariance of Gram--Schmidt orthogonalisation identifies the involution
-    $c\leftrightarrow q-c$ as the Weil-representation instance of the abstract parity.
-    This closes the logical gap in O16--O17 by deriving the fibre structure from the
-    Born--Infeld parity rather than postulating it.
+    The present paper determines exactly which part of that identification the Born--Infeld
+    structure settles.
+    We prove that the Born--Infeld action $S[\chifield]$ is even in $\chifield$, and that the
+    parity map acting simultaneously on configuration and probe,
+    $(\chifield,\eta)\mapsto(-\chifield,-\eta)$, preserves every effective response
+    functional: parity is an \emph{equivariant} symmetry of the Born--Infeld structure.
+    We also prove, by an explicit countermodel, that evenness does not force the stronger
+    fixed-probe (pointwise) indiscernibility of $\chifield$ and $-\chifield$: an even
+    response can separate $\chifield$ from $-\chifield$ under one and the same perturbation.
+    Consequently, the parity orbit $\{\chifield,-\chifield\}$ is a candidate fibre supplied by
+    an equivariance convention, not a fibre forced by the action alone.
+    We then state, as a typed classification problem, the data that a genuine fibre
+    derivation must supply: the configuration space with its boundary conditions, the group
+    of candidate transformations, the prior quotients, the separating family of responses,
+    and a factorisation theorem connecting response equivalence to the fibres of $\Proj$.
+    The absence-of-further-symmetries hypothesis (H-rank) is one clause of that problem, not
+    a theorem and not yet a classifiable statement on its own.
+    At the Weil level, the conjugation $\rhoqc = \overline{\rhoc}$ proves a spectral
+    equivalence of the blocks $c$ and $q-c$; the identification of this equivalence with a
+    physical projection fibre remains an open bridge.
+    The pair-level observable of O16--O17 therefore keeps the status O16 gave it: a
+    structurally motivated hypothesis, spectrally supported, awaiting a fibre theorem.
   \end{abstract}
 
   \textbf{Keywords.}
-  fibre-level admissibility, Born--Infeld parity, BI-indiscernability, parity involution,
+  fibre-level admissibility, Born--Infeld parity, equivariant symmetry, parity involution,
   non-injective projection, Weil representation, Heisenberg Cayley graphs, pair observable,
-  observable hierarchy
+  classification problem
 
   \clearpage
   \tableofcontents
@@ -99,23 +106,31 @@
     dynamics of blocks $c$ and $q-c$ are identical, establishing $\delta_{q-c} = \delta_c$
     and that the factor $r(c,q)$ in O16 is a normalisation artefact, not an invariant.
 
-    However, O17 Section~5.2 explicitly identifies as the primary open problem of the
-    fibre-level programme the derivation of the identification $c \leftrightarrow q-c$ as a
-    necessary consequence of the projection structure $\Proj$ and the Born--Infeld constraint,
-    rather than a structurally motivated hypothesis.
-    The present paper addresses this open problem.
+    O17 Section~5.2 identifies as the primary open problem of the fibre-level programme the
+    derivation of the identification $c \leftrightarrow q-c$ as a necessary consequence of
+    the projection structure $\Proj$ and the Born--Infeld constraint, rather than a
+    structurally motivated hypothesis.
+    The present paper examines that problem and establishes exactly which part of it the
+    Born--Infeld structure settles.
 
-    \paragraph{Scope and what this paper does not claim.}
-      O18 establishes three things:
+    \paragraph{Scope and what this paper does and does not establish.}
+      O18 establishes four things:
       (i) the Born--Infeld action is even in $\chifield$;
-      (ii) this evenness forces the projective fibres to contain the involution
-      $\chifield\mapsto-\chifield$;
-      (iii) in the Weil realisation of $\Heis$, this involution is concretely
-      $c\leftrightarrow q-c$.
-      O18 does \emph{not} claim that the involution is the unique possible fibre structure in
-      all enriched frameworks: the minimality result is explicitly conditional on the absence of
-      additional symmetries beyond Born--Infeld parity (Section~\ref{sec:abstract}).
-      A general classification of all possible fibres is deferred to a subsequent paper.
+      (ii) parity acting simultaneously on configuration and probe is an equivariant
+      symmetry of every Born--Infeld response;
+      (iii) evenness does \emph{not} force fixed-probe indiscernibility of $\chifield$ and
+      $-\chifield$: an explicit even countermodel separates them under a common
+      perturbation, so the parity orbit is not forced into the fibres by the action alone;
+      (iv) the derivation of the fibre structure of $\Proj$ is a classification problem
+      whose required data --- transformation group, prior quotients, boundary conditions,
+      response family, and a factorisation theorem for $\Proj$ --- are stated here
+      explicitly and remain unsupplied.
+      At the Weil level, the correspondence $c \leftrightarrow q-c$ is a structural
+      candidate supported by the spectral equivalence $\rhoqc=\overline{\rhoc}$ of
+      O17~\cite{Beau2026a21}; its identification with a physical projection fibre is an
+      open bridge.
+      O18 does \emph{not} derive the fibre structure of $\Proj$ from the Born--Infeld
+      action, and no downstream result may cite it for such a derivation.
 
   \section{Abstract level: parity from Born--Infeld}
   \label{sec:abstract}
@@ -175,117 +190,154 @@
       It does not depend on any discrete group structure and holds for all smooth $\chifield$.
     \end{remark}
 
-  \subsection{BI-indiscernability and the fibre constraint}
+  \subsection{Two notions of indiscernibility}
     \label{ssec:indiscern}
 
-    \begin{definition}[BI-indiscernability]
+    A fibre statement compares the responses of two configurations to perturbations.
+    There are two inequivalent ways to organise that comparison, and the distinction carries
+    the main result of this section.
+
+    \begin{definition}[Fixed-probe BI-indiscernibility]
       \label{def:indiscern}
-      Two configurations $\chifield_{1}, \chifield_{2}$ are \emph{BI-indiscernible} if, for
-      every BI-admissible perturbation $\eta$ (i.e.\ $\|D\eta\|$ bounded and
-      $\|D(\chifield_{i} + \epsilon\eta)\| \leq \cchi$ for small $\epsilon > 0$), every
-      effective response functional $R$ constructed solely from $S_{\mathrm{BI}}$ and its
-      derivatives --- in particular, $R$ depends on $\chifield$ only through BI-admissible local
-      invariants, hence only through $F^{2} = (D\chifield)^{2}$ and its covariant derivatives,
-      with no residual orientation-sensitive dependence (i.e.\ responses invariant under
-      BI-admissible perturbations at fixed resolution scale) --- satisfies
+      Two configurations $\chifield_{1}, \chifield_{2}$ are \emph{fixed-probe
+      BI-indiscernible} if, for every BI-admissible perturbation $\eta$ (i.e.\ $\|D\eta\|$
+      bounded and $\|D(\chifield_{i} + \epsilon\eta)\| \leq \cchi$ for small
+      $\epsilon > 0$) and every effective response functional $R$ constructed solely from
+      $S_{\mathrm{BI}}$ and its derivatives,
       \begin{equation}
         R[\chifield_{1} + \epsilon\eta]
         = R[\chifield_{2} + \epsilon\eta]
         \quad\text{for all admissible } \eta \text{ and all sufficiently small } \epsilon.
         \label{eq:indiscern}
       \end{equation}
+      The same perturbation $\eta$ is applied to both configurations.
     \end{definition}
 
-    \begin{corollary}[Involution is contained in every fibre]
-      \label{cor:involution}
-      For every $\chifield$, the pair $\{\chifield, -\chifield\}$ consists of BI-indiscernible
-      configurations.
-      Consequently, every projective fibre $\Proj^{-1}(y)$ contains the orbit
-      $\{\chifield, -\chifield\}$ for each $\chifield \in \Proj^{-1}(y)$.
-    \end{corollary}
-
-    \begin{proof}
-      By Lemma~\ref{lem:parity}, $S_{\mathrm{BI}}[\chifield] = S_{\mathrm{BI}}[-\chifield]$.
-      Any response functional $R$ built from $S_{\mathrm{BI}}$ and BI-admissible perturbations
-      therefore satisfies $R[-\chifield + \epsilon\eta] = R[\chifield + \epsilon(-\eta)]$.
-      The admissibility condition in Definition~\ref{def:indiscern} requires $\|D\eta\|$ bounded
-      and $\|D(\chifield_{i}+\epsilon\eta)\|\leq\cchi$; replacing $\eta$ by $-\eta$ preserves
-      both bounds, so the admissible set is closed under $\eta\mapsto-\eta$.
-      Consequently, since $-\eta$ ranges over all admissible perturbations whenever $\eta$ does,
-      the response of $\chifield$ under $\eta$ equals the response of $-\chifield$ under $-\eta$,
-      and hence also under $\eta$.
-      This yields $R[\chifield + \epsilon\eta] = R[-\chifield + \epsilon\eta]$ for all admissible
-      $\eta$, so $\chifield$ and $-\chifield$ are BI-indiscernible by
+    \begin{proposition}[Evenness does not force fixed-probe indiscernibility]
+      \label{prop:no-pointwise}
+      There exist even response functionals $R$, configurations $\chifield$, and admissible
+      perturbations $\eta$ with
+      $R[\chifield + \epsilon\eta] \neq R[-\chifield + \epsilon\eta]$ for all sufficiently
+      small $\epsilon > 0$.
+      Consequently, $\chifield$ and $-\chifield$ are in general \emph{not} fixed-probe
+      BI-indiscernible, and evenness of $S_{\mathrm{BI}}$ does not place the parity orbit
+      $\{\chifield,-\chifield\}$ inside the fibres of any projection defined by
       Definition~\ref{def:indiscern}.
-    \end{proof}
-
-  \subsection{Minimality of the involution (conditional result)}
-    \label{ssec:minimality}
-
-    Corollary~\ref{cor:involution} shows that the parity orbit is \emph{contained} in every
-    fibre.
-    We now address whether the parity orbit is the \emph{minimal} fibre, i.e.\ whether any
-    additional identification $\chifield \sim \psi$ with $\psi \neq -\chifield$ is forced by
-    the Born--Infeld structure.
-
-    \begin{theorem}[Conditional minimality of the parity fibre]
-      \label{thm:minimality}
-      Suppose the only global effective symmetry of $S_{\mathrm{BI}}[\chifield]$ compatible
-      with BI-admissible observables is the parity $\chifield \mapsto -\chifield$.
-      Then the minimal BI-indiscernible fibre is the two-element orbit
-      $\{\chifield, -\chifield\}$.
-      Any identification $\chifield \sim \psi$ with $\psi \neq \pm\chifield$ either
-      \begin{enumerate}
-        \item[(i)] implies the existence of a further effective symmetry of $S_{\mathrm{BI}}$
-        compatible with BI-admissible observables beyond parity, contradicting the hypothesis; or
-        \item[(ii)] is unstable, in the sense that there exists a BI-admissible perturbation
-        $\eta$ for which
-        $R[\chifield + \epsilon\eta] \neq R[\psi + \epsilon\eta]$
-        for some response functional $R$.
-      \end{enumerate}
-    \end{theorem}
+    \end{proposition}
 
     \begin{proof}
-      Suppose $\chifield \sim \psi$ with $\psi \neq \pm\chifield$, i.e.\
-      $R[\chifield + \epsilon\eta] = R[\psi + \epsilon\eta]$ for all admissible $\eta$ and
-      all $R$.
-      Setting $\epsilon = 0$, this requires $R[\chifield] = R[\psi]$ for all $R$, hence
-      $S_{\mathrm{BI}}[\chifield] = S_{\mathrm{BI}}[\psi]$.
-      The map $\chifield \mapsto \psi$ therefore induces an invariance of all BI-derived
-      observables, hence an effective symmetry of the action $S_{\mathrm{BI}}$.
-      By hypothesis, the only such effective symmetry is parity, so $\psi = -\chifield$, a
-      contradiction.
-      If instead~\eqref{eq:indiscern} holds at $\epsilon = 0$ but fails for some admissible
-      $\eta$ at positive $\epsilon$, then case~(ii) applies by definition.
+      Take a one-dimensional configuration space, $D = 1$, and the even response
+      $R(x) = x^{2}$.
+      For $\chifield = 1$, $\eta = 1$, and any sufficiently small $\epsilon > 0$,
+      \[
+        R(1+\epsilon) = (1+\epsilon)^{2}
+        \neq (1-\epsilon)^{2} = R(-1+\epsilon).
+      \]
+      Evenness gives only the reindexed family equality
+      $R[-\chifield + \epsilon\eta] = R[\chifield - \epsilon\eta]$; equality of a family
+      after the bijective reindexing $\eta \mapsto -\eta$ does not give equality at the same
+      index $\eta$, and the countermodel shows that it fails.
+      For the field version, choose an admissible perturbation with
+      $D\chifield \cdot D\eta \neq 0$: the cross term in
+      $(D\chifield + \epsilon D\eta)^{2}$ changes sign between $\chifield$ and $-\chifield$,
+      so any response resolving that cross term separates the two configurations under the
+      common probe $\eta$.
     \end{proof}
 
-    \begin{remark}[Status of the hypothesis]
-      \label{rem:conditionality}
-      The hypothesis that parity is the only global effective symmetry of $S_{\mathrm{BI}}$
-      compatible with BI-admissible observables is not proved here; it is a structural
-      assumption about the effective action.
-      Theorem~\ref{thm:minimality} should therefore be read as: \emph{given the
-      Born--Infeld structure alone, the minimal fibre is the parity orbit.}
-      If the effective action admits additional symmetries in an enriched framework
-      (for instance, from additional topological or gauge constraints), the fibre could
-      be larger.
-      A classification of fibres in such enriched settings is deferred to a subsequent paper.
+    \begin{definition}[Equivariant BI-indiscernibility]
+      \label{def:equivariant}
+      Let $g$ be a transformation acting on configurations and perturbations.
+      Two configurations $\chifield_{1}, \chifield_{2}$ are \emph{$g$-equivariantly
+      BI-indiscernible} if $\chifield_{2} = g\chifield_{1}$ and, for every admissible
+      perturbation $\eta$ and every response functional $R$ as in
+      Definition~\ref{def:indiscern},
+      \begin{equation}
+        R[\chifield_{1} + \epsilon\eta]
+        = R[g\chifield_{1} + \epsilon\, g\eta]
+        \quad\text{for all admissible } \eta \text{ and all sufficiently small } \epsilon.
+        \label{eq:equivariant}
+      \end{equation}
+      The probe is transported by the same transformation as the configuration.
+    \end{definition}
+
+    \begin{proposition}[Parity is an equivariant symmetry]
+      \label{prop:equivariance}
+      For the parity map $g:\chifield\mapsto-\chifield$, $\eta\mapsto-\eta$, every
+      configuration $\chifield$ is $g$-equivariantly BI-indiscernible from $-\chifield$:
+      \begin{equation}
+        R[\chifield + \epsilon\eta] = R[-\chifield - \epsilon\eta]
+        \qquad\text{for all admissible } \eta.
+        \label{eq:parity-equivariance}
+      \end{equation}
+    \end{proposition}
+
+    \begin{proof}
+      $-\chifield - \epsilon\eta = -(\chifield + \epsilon\eta)$, and every response
+      functional built from $S_{\mathrm{BI}}$ inherits the evenness of
+      Lemma~\ref{lem:parity}: $R[-\psi] = R[\psi]$ for all configurations $\psi$.
+      Admissibility is preserved because $\|D(-\psi)\| = \|D\psi\|$.
+    \end{proof}
+
+    \begin{remark}[What equivariance does and does not give]
+      \label{rem:equivariance-scope}
+      Proposition~\ref{prop:equivariance} exhibits parity as a symmetry of the Born--Infeld
+      response structure under the transported-probe comparison.
+      Given a \emph{supplied} group action containing parity, the orbits
+      $\{\chifield,-\chifield\}$ define a quotient of configuration space, and a projection
+      may consistently be \emph{chosen} to factor through that quotient.
+      Equivariance does not prove that the physical projection $\Proj$ has these orbits as
+      fibres: that requires a factorisation theorem connecting response equivalence to
+      $\Proj$, which is part of the classification problem of
+      Section~\ref{ssec:classification} and is not available.
+      By Proposition~\ref{prop:no-pointwise}, the fixed-probe route to the same conclusion
+      is closed, so no current result forces the parity orbit into the fibres of $\Proj$.
     \end{remark}
 
-    The abstract-level conclusion is:
+  \subsection{The fibre-identification problem, typed}
+    \label{ssec:classification}
 
-    \begin{theorem}[Abstract parity involution]
-      \label{thm:abstract}
-      Under the Born--Infeld effective action~\eqref{eq:SBI} and in the absence of global
-      effective symmetries of $S_{\mathrm{BI}}$ beyond parity, the projection $\Proj$ has
-      minimal fibres given by the involution
-      \begin{equation}
-        \Proj(\chifield) = \Proj(-\chifield)
-        \qquad\text{for all } \chifield \in \mathcal{C}_{\chi},
-        \label{eq:abstract_involution}
-      \end{equation}
-      i.e.\ $\Proj$ factors through the $\mathbb{Z}_{2}$-orbit $\{\chifield, -\chifield\}$.
-    \end{theorem}
+    A derivation of the fibre structure of $\Proj$ from the effective action must solve a
+    classification problem whose data we now state explicitly.
+
+    \begin{problem}[Fibre identification for the Born--Infeld projection]
+      \label{prob:classification}
+      Supply the following data and prove the following theorem.
+      \begin{enumerate}
+        \item[(D1)] The configuration space $\mathcal{C}_{\chi}$, with its topology and
+        boundary conditions.
+        \item[(D2)] The group $\mathcal{G}$ of candidate transformations acting on
+        $\mathcal{C}_{\chi}$ and on probes, together with the prior quotients already taken
+        (spacetime, gauge, internal, field redefinitions).
+        \item[(D3)] The complete separating family $\mathcal{R}$ of effective response
+        functionals, with the notion of comparison (fixed-probe or equivariant) fixed once
+        for the whole family.
+        \item[(D4)] The factorisation theorem: the equivalence relation on
+        $\mathcal{C}_{\chi}$ induced by $\mathcal{R}$-indiscernibility coincides with the
+        fibre partition of the physical projection $\Proj$.
+      \end{enumerate}
+      Given (D1)--(D4), classify the effective symmetries of $S_{\mathrm{BI}}$ within
+      $\mathcal{G}$ and determine the fibre of $\Proj$ through each configuration.
+    \end{problem}
+
+    \begin{remark}[Status of the absence-of-further-symmetries hypothesis]
+      \label{rem:hrank-status}
+      The hypothesis that parity is the only effective symmetry of $S_{\mathrm{BI}}$
+      compatible with BI-admissible observables --- hypothesis (H-rank) in downstream
+      papers --- is a candidate answer to the classification clause of
+      Problem~\ref{prob:classification}.
+      Before (D1)--(D3) are supplied, it is not a classifiable mathematical statement: the
+      class of transformations over which ``only'' quantifies is not defined.
+      It is therefore not an irreducible modelling choice either; it is a clause of a
+      problem not yet posed in full.
+      Two structural facts show that the clause has genuine content.
+      First, the adopted action depends on $\chifield$ only through $D\chifield$, so the
+      constant shifts $\chifield \mapsto \chifield + a$ are symmetries of
+      $S_{\mathrm{BI}}$ unless boundary conditions or a prior quotient in (D1)--(D2) remove
+      them; parity is thus not automatically the only candidate.
+      Second, an equivalence relation can have non-trivial classes without being the orbit
+      relation of any globally defined group action, so response indiscernibility of a pair
+      of configurations does not by itself produce a global symmetry.
+    \end{remark}
 
   \section{Concrete level: Weil realisation in $\Heis$}
   \label{sec:concrete}
@@ -315,107 +367,96 @@
       In particular, $\delta_{q-c} = \delta_c$ for all admissible $c$.
     \end{theorem}
 
-  \subsection{Identification of the abstract involution}
+  \subsection{The conjugate pair as a candidate fibre: an open bridge}
     \label{ssec:identification}
 
-    Theorem~\ref{thm:abstract} establishes that the Born--Infeld structure forces an
-    involution $\Proj(\chifield) = \Proj(-\chifield)$.
-    We now identify the concrete realisation of this involution in the Weil setting.
+    The conjugation $\rhoqc = \overline{\rhoc}$ makes the pair $\{c, q-c\}$ the natural
+    candidate realisation of the abstract parity orbit in the Weil setting: complex
+    conjugation reverses representation phases, which is how a sign inversion of an
+    effective amplitude would manifest spectrally, and Theorem~\ref{thm:O17} proves that the
+    two blocks are dynamically indistinguishable under Gram--Schmidt.
 
-    The conjugation $\rhoqc = \overline{\rhoc}$ is a complex conjugation of representations.
-    Complex conjugation is the natural realisation of a sign inversion at the level of
-    representation amplitudes: if a representation $\rhoc$ encodes the response of the
-    substrate field $\chifield$ at character $c$, then $\overline{\rhoc}$ encodes the
-    response of $-\chifield$ at the same character, since complex conjugation reverses the
-    phase of the effective observable.
-    The index shift $c \mapsto q-c$ is therefore the concrete group-theoretic realisation of
-    the abstract sign inversion $\chifield \mapsto -\chifield$ within $G_q$.
+    What Theorem~\ref{thm:O17} proves is a \emph{spectral equivalence} of the blocks $c$
+    and $q-c$.
+    The further statement that the two blocks form one fibre of the physical projection
+    $\Proj$ --- i.e.\ the correspondence $\chifield \leftrightarrow c$,
+    $-\chifield \leftrightarrow q-c$ --- is an identification between a
+    representation-theoretic label and a substrate-field sign.
+    No derivation of this correspondence from $\chifield$-space variables is available, and
+    complex conjugation alone does not supply it: equality of Gram--Schmidt norms for
+    conjugate representations proves that the two blocks are spectrally equivalent, not
+    that $\Proj$ maps them to the same observable.
 
-    This identification is consistent with, and independently supported by,
-    Theorem~\ref{thm:O17}: the dynamical indistinguishability of blocks $c$ and $q-c$ under
-    Gram--Schmidt is precisely the spectral manifestation of BI-indiscernability
-    (Definition~\ref{def:indiscern}) in the Weil setting.
-
-    \begin{remark}[Representation-level identification]
+    \begin{remark}[Status of the Weil-level identification]
       \label{rem:identification}
-      The correspondence $\chifield \leftrightarrow c$, $-\chifield \leftrightarrow q-c$ should
-      be understood as a representation-level realisation of the abstract involution: the
-      conjugation $\rhoqc = \overline{\rhoc}$ is the concrete spectral instance of the sign
-      inversion $\chifield\mapsto-\chifield$ within the Weil setting.
-      A direct derivation of this correspondence from $\chifield$-space variables, bypassing the
-      representation-theoretic language, is left for future work.
+      The correspondence $\chifield \leftrightarrow c$, $-\chifield \leftrightarrow q-c$ is
+      an open bridge: a structural candidate, spectrally supported by
+      Theorem~\ref{thm:O17}, whose derivation would require solving
+      Problem~\ref{prob:classification} together with an explicit construction relating
+      $\chifield$-space parity to the Weil character index.
+      Any downstream use of the pair $\{c,q-c\}$ as a fibre of $\Proj$ must carry this
+      status explicitly.
     \end{remark}
-
-    \begin{theorem}[Weil-level parity involution]
-      \label{thm:weil}
-      In the Weil realisation of $\Heis$, the abstract parity involution
-      $\Proj(\chifield) = \Proj(-\chifield)$ of Theorem~\ref{thm:abstract} is concretely
-      realised as
-      \begin{equation}
-        \Proj(c) = \Proj(q - c)
-        \qquad\text{for all } c \in (\mathbb{Z}/q\mathbb{Z})^{\times}.
-        \label{eq:weil_involution}
-      \end{equation}
-      The conjugate pair $\{c, q-c\}$ is the minimal fibre of $\Proj$ in the Weil setting,
-      conditional on the absence of additional symmetries of $S_{\mathrm{BI}}$ beyond parity.
-    \end{theorem}
-
-    \begin{proof}
-      By Theorem~\ref{thm:abstract}, every fibre of $\Proj$ contains the orbit
-      $\{\chifield, -\chifield\}$.
-      The identification $\chifield \leftrightarrow c$ and $-\chifield \leftrightarrow q-c$
-      follows from the complex conjugation $\rhoqc = \overline{\rhoc}$, which is the spectral
-      realisation of $\chifield \mapsto -\chifield$ in the Weil setting (Section~\ref{ssec:identification}).
-      The minimality is inherited from Theorem~\ref{thm:minimality} under the same conditional
-      hypothesis.
-    \end{proof}
 
   \section{Implications and relation to O16--O17}
   \label{sec:implications}
 
-  \subsection{Requalification of O16 and O17}
+  \subsection{Status of the pair-level programme}
     \label{ssec:requalification}
 
     O16~\cite{Beau2026a20} introduced the pair observable $\sigma_{\mathrm{pair}}(n) =
   \sigma_c(n) \cdot \sigma_{q-c}(n)$ and stated the identification of $\{c, q-c\}$ with
     fibres of $\Proj$ as a structurally motivated hypothesis (O16 Remark~6.2).
     O17~\cite{Beau2026a21} derived the equality $\delta_{q-c} = \delta_c$ from
-    $\rhoqc = \overline{\rhoc}$ and identified $r(c,q)$ as a normalisation artefact,
-    but left the fibre identification as the primary open problem (O17 Section~5.2).
-    Theorem~\ref{thm:weil} closes this open problem: the identification is now a derived
-    consequence of the Born--Infeld structure and is no longer a hypothesis.
+    $\rhoqc = \overline{\rhoc}$ and identified $r(c,q)$ as a normalisation artefact.
+    These spectral results stand.
+    The fibre identification itself keeps the status O16 gave it: a structurally motivated
+    hypothesis.
+    The present paper adds the equivariance result (Proposition~\ref{prop:equivariance}),
+    which makes the parity orbit the distinguished candidate, and the no-go of
+    Proposition~\ref{prop:no-pointwise}, which shows that the fixed-probe route cannot
+    upgrade the hypothesis to a theorem.
+    The upgrade, if available, must come from a solution of
+    Problem~\ref{prob:classification}.
 
     \begin{remark}[Complementarity with O15--O17]
 O15~\cite{Beau2026a19} established that no reweighting of block-level data can recover
 the fibre-level exponent.
-O16--O17 established the correct observable and exponent at the pair level.
-O18 (the present paper) provides the foundational derivation of the fibre structure
-underlying O16--O17.
-The three results are complementary: O15 closes the block-level programme; O16--O17 open
-and populate the fibre-level programme; O18 provides its structural foundation.
+O16--O17 established the correct observable and exponent at the pair level, conditional
+on the fibre hypothesis.
+O18 (the present paper) delimits what the Born--Infeld structure itself contributes to
+that hypothesis: equivariant parity, and no more.
     \end{remark}
 
   \subsection{Effect on $\delta_{\mathrm{pair}} \to \bstar$}
     \label{ssec:dbetastar}
 
-    The structural relation $\bstar = 1/(\delta + 1/2)$, used throughout the O-series, should
-    be evaluated at $\delta = \dpair \approx 7.44$ as established in O16--O17.
-    This evaluation was already performed in O17 Section~4 on the basis of the (then
-    hypothetical) fibre identification.
-    Theorem~\ref{thm:weil} removes the hypothetical status: the substitution
-    $\delta \to \dpair$ is now a derived consequence of the fibre structure, not an
-    assumption.
-    This also removes the last remaining observable-level ambiguity identified in O15:
-    the aggregation no-go of O15 Corollary~4.8~\cite{Beau2026a19} showed that no
-    block-level reweighting recovers the correct exponent; O18 now explains why the fibre
-    level is the structurally mandated one.
-    The full derivation of the $\dpair \to \bstar$ relation at the fibre level, without
-    reliance on pipeline conventions, is the subject of O21.
+    The structural relation $\bstar = 1/(\delta + 1/2)$, used throughout the O-series, is
+    evaluated at $\delta = \dpair \approx 7.44$ in O17 Section~4 on the basis of the fibre
+    identification.
+    That evaluation is therefore conditional on the same hypothesis as the identification
+    itself, and it inherits the open-bridge status of
+    Remark~\ref{rem:identification}.
+    The aggregation no-go of O15 Corollary~4.8~\cite{Beau2026a19} stands: no block-level
+    reweighting recovers the fibre-level exponent, so the pair level remains the only
+    candidate carrier of the phenomenological exponent, conditional on the fibre
+    hypothesis.
 
   \subsection{Open directions}
     \label{ssec:open}
 
-    The present paper leaves three directions open.
+    The present paper leaves four directions open.
+
+    \textbf{The classification problem.}
+    Problem~\ref{prob:classification} is the central open item: supply (D1)--(D4) and
+    classify the effective symmetries.
+    Until it is solved, the fibre structure of $\Proj$ is a hypothesis in every downstream
+    use.
+
+    \textbf{The Weil-level bridge.}
+    A derivation of the correspondence $\chifield \leftrightarrow c$,
+    $-\chifield \leftrightarrow q-c$ from $\chifield$-space variables
+    (Remark~\ref{rem:identification}).
 
     \textbf{Canonical normalisation.}
     The pipeline normalisation factor $D(c, b_1, b_2, n)$ is currently implicit in the
@@ -432,12 +473,6 @@ and populate the fibre-level programme; O18 provides its structural foundation.
     It appears to be a dynamical persistence criterion rather than a spectral one, and is the
     subject of O20.
 
-    \textbf{General classification of fibres.}
-    Theorem~\ref{thm:minimality} is conditional on the absence of additional symmetries.
-    A full classification of fibres in frameworks with additional gauge or topological
-    structure would determine whether larger fibres are possible and, if so, their structure.
-    This programme is deferred to a subsequent paper following O21.
-
   \section{Summary}
   \label{sec:summary}
 
@@ -446,25 +481,28 @@ and populate the fibre-level programme; O18 provides its structural foundation.
     (Lemma~\ref{lem:parity}).
     This follows directly from the dependence of $S_{\mathrm{BI}}$ on $F^2 = (D\chifield)^2$.
 
-    \item Evenness of $S_{\mathrm{BI}}$ implies that every projective fibre of $\Proj$
-    contains the parity orbit $\{\chifield, -\chifield\}$
-    (Corollary~\ref{cor:involution}).
-    This uses the definition of BI-indiscernability (Definition~\ref{def:indiscern}) and
-    does not require any group-theoretic input.
+    \item Parity acting simultaneously on configuration and probe is an equivariant
+    symmetry of every Born--Infeld response (Proposition~\ref{prop:equivariance}).
+    This makes the orbit $\{\chifield, -\chifield\}$ the distinguished candidate fibre.
 
-    \item Under the assumption that parity is the only global symmetry of $S_{\mathrm{BI}}$,
-    the minimal fibre is the involution $\Proj(\chifield) = \Proj(-\chifield)$
-    (Theorems~\ref{thm:minimality} and~\ref{thm:abstract}).
-    This is a conditional result; see Remark~\ref{rem:conditionality}.
+    \item Evenness does not force fixed-probe indiscernibility: the even response
+    $R(x) = x^{2}$ separates $\chifield = 1$ from $-\chifield = -1$ under the common probe
+    $\eta = 1$ (Proposition~\ref{prop:no-pointwise}).
+    The parity orbit is therefore supplied by an equivariance convention, not forced by
+    the action.
 
-    \item In the Weil realisation of $\Heis$, the abstract involution is identified with
-    $c \leftrightarrow q-c$ via the conjugation $\rhoqc = \overline{\rhoc}$ established in
-    O17~\cite{Beau2026a21} (Theorem~\ref{thm:weil}).
+    \item The derivation of the fibre structure of $\Proj$ is the typed classification
+    problem stated in Problem~\ref{prob:classification}; its data (D1)--(D4) are not
+    supplied by the current corpus.
+    The absence-of-further-symmetries hypothesis (H-rank) is one clause of that problem
+    (Remark~\ref{rem:hrank-status}).
 
-    \item These results close the primary open problem stated in O17 Section~5.2.
-    The pair observable $\sigma_{\mathrm{pair}}(n) = \sigma_c(n)\cdot\sigma_{q-c}(n)$ and
-    the exponent doubling $\dpair = 2\,\delta_c \approx 7.44$ are now structurally derived
-    rather than hypothetically motivated.
+    \item In the Weil realisation of $\Heis$, the conjugate pair $\{c, q-c\}$ is the
+    candidate realisation of the parity orbit, spectrally supported by
+    $\rhoqc = \overline{\rhoc}$ and $\delta_{q-c} = \delta_c$
+    (Theorem~\ref{thm:O17}); the identification with a fibre of $\Proj$ is an open bridge
+    (Remark~\ref{rem:identification}).
+    The pair observable of O16--O17 keeps its status of structurally motivated hypothesis.
   \end{enumerate}
 
   \bibliographystyle{plain}
