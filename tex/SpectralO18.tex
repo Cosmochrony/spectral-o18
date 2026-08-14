@@ -47,15 +47,19 @@
     pair-level observable and the exponent doubling $\dpair = 2\,\delta_{c} \approx 7.44$.
     The present paper determines exactly which part of that identification the Born--Infeld
     structure settles.
-    We prove that the Born--Infeld action $S[\chifield]$ is even in $\chifield$, and that the
-    parity map acting simultaneously on configuration and probe,
-    $(\chifield,\eta)\mapsto(-\chifield,-\eta)$, preserves every effective response
-    functional: parity is an \emph{equivariant} symmetry of the Born--Infeld structure.
+    We prove that the Born--Infeld action $S[\chifield]$ is even in $\chifield$, and that
+    parity acts \emph{equivariantly} on the family of its response functionals: under the
+    transported-probe comparison $(\chifield,\eta)\mapsto(-\chifield,-\eta)$, a response of
+    derivative order $k$ transforms with the character $(-1)^{k}$, so even-order responses
+    (the action itself among them) are preserved while odd-order responses --- including the
+    Born--Infeld constitutive response --- reverse sign and generically separate
+    $\chifield$ from $-\chifield$.
     We also prove, by an explicit countermodel, that evenness does not force the stronger
     fixed-probe (pointwise) indiscernibility of $\chifield$ and $-\chifield$: an even
     response can separate $\chifield$ from $-\chifield$ under one and the same perturbation.
-    Consequently, the parity orbit $\{\chifield,-\chifield\}$ is a candidate fibre supplied by
-    an equivariance convention, not a fibre forced by the action alone.
+    Consequently, the parity orbit $\{\chifield,-\chifield\}$ is a candidate fibre only
+    relative to a supplied restriction of the observable family to even-order responses, and
+    is not forced by the action alone under either comparison.
     We then state, as a typed classification problem, the data that a genuine fibre
     derivation must supply: the configuration space with its boundary conditions, the group
     of candidate transformations, the prior quotients, the separating family of responses,
@@ -116,15 +120,18 @@
     \paragraph{Scope and what this paper does and does not establish.}
       O18 establishes four things:
       (i) the Born--Infeld action is even in $\chifield$;
-      (ii) parity acting simultaneously on configuration and probe is an equivariant
-      symmetry of every Born--Infeld response;
+      (ii) parity acts equivariantly on the Born--Infeld response family: responses of
+      derivative order $k$ transform with the character $(-1)^{k}$ under the
+      transported-probe comparison, so even-order responses are preserved and odd-order
+      responses reverse sign;
       (iii) evenness does \emph{not} force fixed-probe indiscernibility of $\chifield$ and
       $-\chifield$: an explicit even countermodel separates them under a common
       perturbation, so the parity orbit is not forced into the fibres by the action alone;
       (iv) the derivation of the fibre structure of $\Proj$ is a classification problem
       whose required data --- transformation group, prior quotients, boundary conditions,
-      response family, and a factorisation theorem for $\Proj$ --- are stated here
-      explicitly and remain unsupplied.
+      response family (including its restriction, if any, to even-order responses), and a
+      factorisation theorem for $\Proj$ --- are stated here explicitly and remain
+      unsupplied.
       At the Weil level, the correspondence $c \leftrightarrow q-c$ is a structural
       candidate supported by the spectral equivalence $\rhoqc=\overline{\rhoc}$ of
       O17~\cite{Beau2026a21}; its identification with a physical projection fibre is an
@@ -226,66 +233,83 @@
     \end{proposition}
 
     \begin{proof}
-      Take a one-dimensional configuration space, $D = 1$, and the even response
-      $R(x) = x^{2}$.
+      Take a one-dimensional toy model with configurations $x \in \mathbb{R}$ and the even
+      response $R(x) = x^{2}$, which is the toy action itself.
       For $\chifield = 1$, $\eta = 1$, and any sufficiently small $\epsilon > 0$,
       \[
         R(1+\epsilon) = (1+\epsilon)^{2}
         \neq (1-\epsilon)^{2} = R(-1+\epsilon).
       \]
-      Evenness gives only the reindexed family equality
+      The probe $\eta = 1$ is admissible in the sense of Definition~\ref{def:indiscern}
+      whenever $\cchi \geq 1 + \epsilon$, which holds for all sufficiently small $\epsilon$
+      once $\cchi > 1$.
+      For an even response, evenness gives only the reindexed family equality
       $R[-\chifield + \epsilon\eta] = R[\chifield - \epsilon\eta]$; equality of a family
       after the bijective reindexing $\eta \mapsto -\eta$ does not give equality at the same
       index $\eta$, and the countermodel shows that it fails.
       For the field version, choose an admissible perturbation with
       $D\chifield \cdot D\eta \neq 0$: the cross term in
       $(D\chifield + \epsilon D\eta)^{2}$ changes sign between $\chifield$ and $-\chifield$,
-      so any response resolving that cross term separates the two configurations under the
-      common probe $\eta$.
+      so the action itself --- a response functional built solely from $S_{\mathrm{BI}}$ ---
+      separates the two configurations under the common probe $\eta$.
     \end{proof}
 
-    \begin{definition}[Equivariant BI-indiscernibility]
+    \begin{definition}[Transported-probe comparison; derivative order of a response]
       \label{def:equivariant}
-      Let $g$ be a transformation acting on configurations and perturbations.
-      Two configurations $\chifield_{1}, \chifield_{2}$ are \emph{$g$-equivariantly
-      BI-indiscernible} if $\chifield_{2} = g\chifield_{1}$ and, for every admissible
-      perturbation $\eta$ and every response functional $R$ as in
-      Definition~\ref{def:indiscern},
-      \begin{equation}
-        R[\chifield_{1} + \epsilon\eta]
-        = R[g\chifield_{1} + \epsilon\, g\eta]
-        \quad\text{for all admissible } \eta \text{ and all sufficiently small } \epsilon.
-        \label{eq:equivariant}
-      \end{equation}
-      The probe is transported by the same transformation as the configuration.
+      Let $g$ be a transformation acting linearly on configurations and perturbations.
+      The \emph{transported-probe comparison} of $\chifield$ with $g\chifield$ evaluates
+      each response at $(\chifield + \epsilon\eta)$ and at
+      $(g\chifield + \epsilon\, g\eta)$: the probe is transported by the same
+      transformation as the configuration.
+      A response functional \emph{of derivative order $k$} is a $k$-th functional
+      derivative of $S_{\mathrm{BI}}$ evaluated at the configuration and contracted with
+      admissible test directions; the responses of Definition~\ref{def:indiscern} are
+      generated by these, with $k = 0$ giving the action-level responses.
     \end{definition}
 
-    \begin{proposition}[Parity is an equivariant symmetry]
+    \begin{proposition}[Parity covariance of the response family]
       \label{prop:equivariance}
-      For the parity map $g:\chifield\mapsto-\chifield$, $\eta\mapsto-\eta$, every
-      configuration $\chifield$ is $g$-equivariantly BI-indiscernible from $-\chifield$:
+      Let $R$ be a response functional of derivative order $k$.
+      Under the parity map $g:\chifield\mapsto-\chifield$, $\eta\mapsto-\eta$,
       \begin{equation}
-        R[\chifield + \epsilon\eta] = R[-\chifield - \epsilon\eta]
+        R[-\chifield - \epsilon\eta] = (-1)^{k}\, R[\chifield + \epsilon\eta]
         \qquad\text{for all admissible } \eta.
         \label{eq:parity-equivariance}
       \end{equation}
+      Parity therefore acts equivariantly on the response family through the character
+      $(-1)^{k}$: even-order responses --- the action itself among them --- take equal
+      values at $(\chifield,\eta)$ and $(-\chifield,-\eta)$, while odd-order responses
+      reverse sign and generically separate $\chifield$ from $-\chifield$ under the
+      transported probe.
     \end{proposition}
 
     \begin{proof}
-      $-\chifield - \epsilon\eta = -(\chifield + \epsilon\eta)$, and every response
-      functional built from $S_{\mathrm{BI}}$ inherits the evenness of
-      Lemma~\ref{lem:parity}: $R[-\psi] = R[\psi]$ for all configurations $\psi$.
+      $-\chifield - \epsilon\eta = -(\chifield + \epsilon\eta)$, so it suffices to show
+      $R[-\psi] = (-1)^{k} R[\psi]$ for the $k$-th variation of $S_{\mathrm{BI}}$.
+      Differentiating the evenness identity $S_{\mathrm{BI}}[-\psi] = S_{\mathrm{BI}}[\psi]$
+      of Lemma~\ref{lem:parity} $k$ times along admissible directions produces one sign per
+      differentiation of the inner argument, hence the factor $(-1)^{k}$.
       Admissibility is preserved because $\|D(-\psi)\| = \|D\psi\|$.
+      The first-order instance is the Born--Infeld constitutive response, which is odd:
+      $-\chifield$ is the opposite-sign configuration, and every response resolving the
+      first variation distinguishes it from $\chifield$.
     \end{proof}
 
-    \begin{remark}[What equivariance does and does not give]
+    \begin{remark}[What covariance does and does not give]
       \label{rem:equivariance-scope}
       Proposition~\ref{prop:equivariance} exhibits parity as a symmetry of the Born--Infeld
-      response structure under the transported-probe comparison.
-      Given a \emph{supplied} group action containing parity, the orbits
-      $\{\chifield,-\chifield\}$ define a quotient of configuration space, and a projection
-      may consistently be \emph{chosen} to factor through that quotient.
-      Equivariance does not prove that the physical projection $\Proj$ has these orbits as
+      \emph{action}, acting equivariantly on responses with the character $(-1)^{k}$.
+      Indiscernibility of $\chifield$ and $-\chifield$ under the transported-probe
+      comparison therefore holds exactly on the even-order part of the response family, and
+      fails on the odd-order part.
+      The parity orbit $\{\chifield,-\chifield\}$ is thus a candidate fibre only relative
+      to a \emph{supplied} restriction of the observable family to even-order responses;
+      that restriction is part of the response-family datum (D3) of
+      Problem~\ref{prob:classification} and is not derived here.
+      Given such a restriction together with a supplied group action containing parity, the
+      orbits define a quotient of configuration space, and a projection may consistently be
+      \emph{chosen} to factor through that quotient.
+      Covariance does not prove that the physical projection $\Proj$ has these orbits as
       fibres: that requires a factorisation theorem connecting response equivalence to
       $\Proj$, which is part of the classification problem of
       Section~\ref{ssec:classification} and is not available.
@@ -309,8 +333,9 @@
         $\mathcal{C}_{\chi}$ and on probes, together with the prior quotients already taken
         (spacetime, gauge, internal, field redefinitions).
         \item[(D3)] The complete separating family $\mathcal{R}$ of effective response
-        functionals, with the notion of comparison (fixed-probe or equivariant) fixed once
-        for the whole family.
+        functionals, with the notion of comparison (fixed-probe or transported-probe) fixed
+        once for the whole family, and with any restriction to even-order responses stated
+        explicitly.
         \item[(D4)] The factorisation theorem: the equivalence relation on
         $\mathcal{C}_{\chi}$ induced by $\mathcal{R}$-indiscernibility coincides with the
         fibre partition of the physical projection $\Proj$.
@@ -412,8 +437,9 @@
     These spectral results stand.
     The fibre identification itself keeps the status O16 gave it: a structurally motivated
     hypothesis.
-    The present paper adds the equivariance result (Proposition~\ref{prop:equivariance}),
-    which makes the parity orbit the distinguished candidate, and the no-go of
+    The present paper adds the covariance result (Proposition~\ref{prop:equivariance}),
+    which makes the parity orbit the distinguished candidate relative to the even-order
+    part of the response family, and the no-go of
     Proposition~\ref{prop:no-pointwise}, which shows that the fixed-probe route cannot
     upgrade the hypothesis to a theorem.
     The upgrade, if available, must come from a solution of
@@ -425,7 +451,7 @@ the fibre-level exponent.
 O16--O17 established the correct observable and exponent at the pair level, conditional
 on the fibre hypothesis.
 O18 (the present paper) delimits what the Born--Infeld structure itself contributes to
-that hypothesis: equivariant parity, and no more.
+that hypothesis: parity covariance of the response family, and no more.
     \end{remark}
 
   \subsection{Effect on $\delta_{\mathrm{pair}} \to \bstar$}
@@ -481,15 +507,18 @@ that hypothesis: equivariant parity, and no more.
     (Lemma~\ref{lem:parity}).
     This follows directly from the dependence of $S_{\mathrm{BI}}$ on $F^2 = (D\chifield)^2$.
 
-    \item Parity acting simultaneously on configuration and probe is an equivariant
-    symmetry of every Born--Infeld response (Proposition~\ref{prop:equivariance}).
-    This makes the orbit $\{\chifield, -\chifield\}$ the distinguished candidate fibre.
+    \item Parity acts equivariantly on the Born--Infeld response family with the
+    character $(-1)^{k}$: even-order responses are preserved under the transported-probe
+    comparison and odd-order responses reverse sign
+    (Proposition~\ref{prop:equivariance}).
+    This makes the orbit $\{\chifield, -\chifield\}$ the distinguished candidate fibre
+    relative to the even-order part of the family.
 
     \item Evenness does not force fixed-probe indiscernibility: the even response
     $R(x) = x^{2}$ separates $\chifield = 1$ from $-\chifield = -1$ under the common probe
     $\eta = 1$ (Proposition~\ref{prop:no-pointwise}).
-    The parity orbit is therefore supplied by an equivariance convention, not forced by
-    the action.
+    The parity orbit is therefore supplied by a comparison convention together with an
+    even-order restriction of the observables, not forced by the action.
 
     \item The derivation of the fibre structure of $\Proj$ is the typed classification
     problem stated in Problem~\ref{prob:classification}; its data (D1)--(D4) are not
