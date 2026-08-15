@@ -4,7 +4,8 @@ This repository contains the source of the **O18** Cosmochrony paper
 This work belongs to the **spectral admissibility sub-programme** and determines exactly which part of the
 fibre-identification problem left open by **O17** the Born–Infeld structure settles:
 
-> Parity is an equivariant symmetry of every Born–Infeld response; it does not, by itself, force the fibres of Π.
+> Parity acts on the Born–Infeld response family with the character $(-1)^k$ of the derivative order:
+> even-order responses are preserved, odd-order responses reversed. It does not, by itself, force the fibres of Π.
 
 
 # Context
@@ -38,15 +39,20 @@ $S_{\mathrm{BI}}[-\chi] = S_{\mathrm{BI}}[\chi]$
 
 because it depends on $\chi$ only through $F^2 = (D\chi)^2$.
 
-## 2. Parity is an equivariant symmetry (proved)
+## 2. Parity covariance of the response family (proved)
 
 For the parity map acting simultaneously on configuration and probe,
-$(\chi, \eta) \mapsto (-\chi, -\eta)$, every Born–Infeld response satisfies
+$(\chi, \eta) \mapsto (-\chi, -\eta)$, a response of derivative order $k$ (a $k$-th functional
+derivative of $S_{\mathrm{BI}}$ contracted with fixed admissible test directions) satisfies
 
-$R[\chi + \epsilon\eta] = R[-\chi - \epsilon\eta]$
+$R[-\chi - \epsilon\eta] = (-1)^k\, R[\chi + \epsilon\eta]$
 
 for all admissible probes $\eta$.
-The orbit $\{\chi, -\chi\}$ is therefore the distinguished **candidate** fibre.
+Even-order responses (the action among them) are preserved under the transported-probe comparison;
+odd-order responses — the Born–Infeld constitutive response included — reverse sign and generically
+separate $\chi$ from $-\chi$.
+The orbit $\{\chi, -\chi\}$ is therefore a **candidate** fibre only relative to a supplied restriction
+of the observable family to even-order responses.
 
 ## 3. Evenness does not force fixed-probe indiscernibility (no-go, proved)
 
@@ -65,7 +71,8 @@ A derivation of the fibre structure of Π must supply:
 - **(D1)** the configuration space with its boundary conditions
 - **(D2)** the group of candidate transformations and the prior quotients
 - **(D3)** the complete separating family of response functionals, with the comparison
-  convention (fixed-probe or equivariant) fixed once for the whole family
+  convention (fixed-probe or transported-probe) fixed once for the whole family and any restriction
+  to even-order responses stated explicitly
 - **(D4)** a factorisation theorem identifying response equivalence with the fibre
   partition of Π
 
@@ -144,7 +151,7 @@ This repository is intended as a research reference.
 Critical feedback, independent verification, and further analysis of:
 
 - fibre-level admissibility
-- Born–Infeld parity and equivariance
+- Born–Infeld parity covariance
 - Weil-level realisations
 
 are welcome.
