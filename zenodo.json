@@ -3,5 +3,6 @@
   "web_url": "https://cosmochrony.org/science/spectral/program/o18/",
   "main_tex": "tex/SpectralO18.tex",
   "zenodo_id": 19321413,
-  "doi": "10.5281/zenodo.19321413"
+  "doi": "10.5281/zenodo.19321413",
+  "notes": "Version 2.1 corrects two motivation passages. Version 2.0 derived the exclusion of emergent gauge structure under an injective projection from trivial holonomy; trivial holonomy does not exclude gauge transformations. Both passages now ground the exclusion on injectivity itself: an injective projection admits no non-trivial re-identification of its fibres and, in the admissible principal-bundle setting, has a trivial structure group. PDF title and author metadata are set. No result of the paper changes."
 }
