@@ -37,7 +37,10 @@ The action satisfies
 
 $S_{\mathrm{BI}}[-\chi] = S_{\mathrm{BI}}[\chi]$
 
-because it depends on $\chi$ only through $F^2 = (D\chi)^2$.
+because it depends on $\chi$ only through $F^2 = (D\chi)^2$, the contraction of the gradient with itself.
+This is a Born–Infeld-type action of the gradient of $\chi$ adopted by O18 as its own model.
+BornInfeld supplies a motivation for non-injectivity and the capacity axiom [A-cap]; it does not derive this
+action, and its own Born–Infeld candidate is a functional of a gauge field strength whose relational origin is open.
 
 ## 2. Parity covariance of the response family (proved)
 
@@ -49,7 +52,7 @@ $R[-\chi - \epsilon\eta] = (-1)^k\, R[\chi + \epsilon\eta]$
 
 for all admissible probes $\eta$.
 Even-order responses (the action among them) are preserved under the transported-probe comparison;
-odd-order responses — the Born–Infeld constitutive response included — reverse sign and generically
+odd-order responses — the first-order response of the action included — reverse sign and generically
 separate $\chi$ from $-\chi$.
 The orbit $\{\chi, -\chi\}$ is therefore a **candidate** fibre only relative to a supplied restriction
 of the observable family to even-order responses.
