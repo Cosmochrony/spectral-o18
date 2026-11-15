@@ -31,7 +31,7 @@ O18 delimits what the Born–Infeld action itself contributes to that problem.
 
 # Core Results
 
-## 1. Parity of the Born–Infeld action (proved)
+## 1. Parity of the adopted Born–Infeld-type action (proved)
 
 The action satisfies
 
