@@ -26,7 +26,7 @@ O17 §5.2 left one fundamental open problem:
 
 This identification was structurally consistent and supported by representation theory,
 but not derived from the underlying χ-framework.
-O18 delimits what the Born–Infeld action itself contributes to that problem.
+O18 delimits what its adopted Born–Infeld-type action itself contributes to that problem.
 
 
 # Core Results
