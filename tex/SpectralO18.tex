@@ -49,12 +49,14 @@
     pair-level observable and the exponent doubling $\dpair = 2\,\delta_{c} \approx 7.44$.
     The present paper determines exactly which part of that identification the Born--Infeld
     structure settles.
-    We prove that the Born--Infeld action $S[\chifield]$ is even in $\chifield$, and that
+    We adopt a Born--Infeld-type action $S[\chifield]$ of the gradient of $\chifield$, a model
+    of this paper and not a consequence of the capacity axiom.
+    We prove that this action is even in $\chifield$, and that
     parity acts \emph{equivariantly} on the family of its response functionals: under the
     transported-probe comparison $(\chifield,\eta)\mapsto(-\chifield,-\eta)$, a response of
     derivative order $k$ transforms with the character $(-1)^{k}$, so even-order responses
     (the action itself among them) are preserved while odd-order responses --- including the
-    Born--Infeld constitutive response --- reverse sign and generically separate
+    first-order response of the action --- reverse sign and generically separate
     $\chifield$ from $-\chifield$.
     We also prove, by an explicit countermodel, that evenness does not force the stronger
     fixed-probe (pointwise) indiscernibility of $\chifield$ and $-\chifield$: an even
@@ -91,15 +93,16 @@
     The Cosmochrony framework~\cite{Cosmochrony} describes physics as emerging from a
     pre-geometric substrate field $\chifield$ projected onto effective observables via a map
     $\Proj:\chifield\to\Obs$.
-    A central structural motivation of the framework, developed in the companion
+    A central structural motivation of the framework, stated as motivation only in the companion
     paper~\cite{Beau2026c}, is that $\Proj$ is non-injective: an injective projection admits no
     non-trivial re-identification of its fibres and, in the admissible principal-bundle setting,
-    has a trivial structure group, so that no fibre gauge structure can emerge
-    from it~\cite{Cosmochrony}.
+    has a trivial structure group, so that no emergent fibre gauge structure would be available
+    on this account~\cite{Cosmochrony}.
     Finite projective capacity is the capacity axiom [A-cap] of~\cite{Beau2026c}, motivated by
-    non-injective projection with finite local distinguishability, and the Born--Infeld
-    completion of the effective action is the saturation candidate compatible with this
-    axiom~\cite{Beau2026c}.
+    non-injective projection with finite local distinguishability.
+    The companion paper presents the Born--Infeld completion of the effective action as a
+    saturation candidate compatible with this axiom; it neither derives it from the axiom nor
+    selects it~\cite{Beau2026c}.
 
     The O-series spectral admissibility sub-programme has investigated the capacity exponent
     $\delta$ governing projective dynamics on Heisenberg Cayley graphs $\Cay(G_q,S_q)$ with
@@ -146,11 +149,11 @@
   \section{Abstract level: parity from Born--Infeld}
   \label{sec:abstract}
 
-  \subsection{Imported results on non-injectivity}
+  \subsection{Imported inputs and adopted action}
     \label{ssec:noninjectivity}
 
-    We recall two structural inputs from the companion paper~\cite{Beau2026c} that are used
-    here without re-derivation.
+    We recall a motivation and an axiom from the companion paper~\cite{Beau2026c}, neither of
+    which is a result of that paper, and state the action adopted here.
 
     \begin{enumerate}
       \item \textbf{Non-injectivity of $\Proj$}~\cite{Beau2026c}.
@@ -166,10 +169,14 @@
       Finite projective transport capacity is the capacity axiom [A-cap] of~\cite{Beau2026c},
       an explicit hypothesis motivated by non-injective projection with finite local
       distinguishability.
-      The Born--Infeld effective action is the saturation candidate compatible with this
-      axiom, analytic in the weak-field limit and saturating the constitutive relation; it is
-      the form adopted throughout this paper.
-      The effective action takes the form
+      The companion paper presents a Born--Infeld action of a gauge field strength $F_{\mu\nu}$
+      as a saturation candidate compatible with this axiom.
+      It does not derive that action, and it leaves open which continuum quantity, if any,
+      inherits the capacity bound, and how $F_{\mu\nu}$ arises from the relational field.
+
+      \item \textbf{Adopted action.}
+      This paper adopts its own model, not derived from [A-cap]: a Born--Infeld-type action of
+      the gradient of $\chifield$, analytic in the weak-field limit,
       \begin{equation}
         S_{\mathrm{BI}}[\chifield]
         = \beta^{2} \int \!\mathrm{d}^{4}x
@@ -177,7 +184,9 @@
         \qquad F = D\chifield,
         \label{eq:SBI}
       \end{equation}
-      where $\beta$ is the saturation scale and $F^{2} = F_{\mu\nu}F^{\mu\nu}$.
+      where $\beta$ is the saturation scale and $F^{2} = F_{\mu}F^{\mu}$ is the contraction of
+      the gradient with itself.
+      All results below concern this adopted action.
     \end{enumerate}
 
   \subsection{Evenness of the Born--Infeld action}
@@ -191,7 +200,7 @@
     \begin{proof}
       Under $\chifield \mapsto -\chifield$, the field gradient transforms as
       $F = D\chifield \mapsto -D\chifield = -F$.
-      Therefore $F^{2} = F_{\mu\nu}F^{\mu\nu} \mapsto (-F)_{\mu\nu}(-F)^{\mu\nu} = F^{2}$.
+      Therefore $F^{2} = F_{\mu}F^{\mu} \mapsto (-F)_{\mu}(-F)^{\mu} = F^{2}$.
       Since the integrand in~\eqref{eq:SBI} depends on $\chifield$ only through $F^{2}$,
       the action is unchanged.
     \end{proof}
@@ -301,7 +310,7 @@
       of Lemma~\ref{lem:parity} $k$ times along admissible directions produces one sign per
       differentiation of the inner argument, hence the factor $(-1)^{k}$.
       Admissibility is preserved because $\|D(-\psi)\| = \|D\psi\|$.
-      The first-order instance is the Born--Infeld constitutive response, which is odd:
+      The first-order instance is the first-order response of $S_{\mathrm{BI}}$, which is odd:
       $-\chifield$ is the opposite-sign configuration, and any response resolving a
       non-vanishing first variation distinguishes it from $\chifield$ (separation fails
       only where the contracted first variation vanishes).
