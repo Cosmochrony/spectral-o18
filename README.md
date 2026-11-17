@@ -10,6 +10,9 @@ fibre-identification problem left open by **O17** the Born–Infeld structure se
 
 # Context
 
+**Version 2.3.** Withdraws the reciprocal-rate implication and its numerical-window selection.
+The action parity, response covariance, countermodel and open fibre-classification problem are unchanged.
+
 **O17** established that:
 
 - conjugate Weil blocks $(c, q-c)$ carry identical dynamics
@@ -103,8 +106,14 @@ Using O17:
 - pair observable as fibre observable (O16–O18): **structurally motivated hypothesis**,
   spectrally supported, awaiting a solution of the fibre-identification problem
 
-The evaluation $\delta \to \delta_{\mathrm{pair}} \approx 7.44$ in the relation
-$\beta^{*} = 1/(\delta + 1/2)$ is conditional on the same hypothesis.
+O6 proves only $\beta_{\mathrm{eff}}\leq1/(\alpha+1/2)$ under its effective growth hypothesis
+(G_R) and a power-law redundancy Ansatz in the exploration variable $p$.
+Its countermodel $\alpha=8$, $p=n^{1/17}$ satisfies those premises but refutes equality.
+The reciprocal is retained only as a defined legacy diagnostic; the historical range $[7.4,10.6]$
+is neither a necessary nor a sufficient condition selecting the charged-lepton cascade window.
+
+The fibre identification does not restore the withdrawn equality.
+A supplied pair exponent near 7.44 defines only the comparison value $1/(7.44+1/2)\approx0.126$.
 
 
 # Residual Open Problems
@@ -118,8 +127,9 @@ $\beta^{*} = 1/(\delta + 1/2)$ is conditional on the same hypothesis.
 3. **Canonical normalisation (O19)**
    Remove residual dependence on $(b_1, b_2)$.
 
-4. **Spectral window selection (O20)**
-   Explain the restriction to $[7.4, 10.6]$.
+4. **Persistence comparison (O20)**
+   Assess its symbolic threshold interval independently of the historical range $[7.4,10.6]$;
+   no physical restriction to that range follows from the O6 upper bound.
 
 
 # Repository Structure
