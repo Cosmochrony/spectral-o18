@@ -4,5 +4,5 @@
   "main_tex": "tex/SpectralO18.tex",
   "zenodo_id": 19321413,
   "doi": "10.5281/zenodo.19321413",
-  "notes": "Version 2.4. Theorem 3.1, which recalls O17 Theorem 2.1 and Corollary 2.3, is restated within O17's toy model: there the raw redundancy counts of c and q-c coincide, and O17 leaves the normalised exponents to the normalisation; on the real O12/O13 pipeline the equality delta_{q-c} = delta_c for the exact block observable follows instead from O16's conjugate-block identity. The sentences recalling O17's r(c,q) statement are scoped to its toy model, with r = 1 on the real pipeline's exact block observable (O16). The historical value 7.44 is no longer attributed to O16. The conjugation identity and the open fibre identification are unchanged. Theorem 3.1 distinguishes O17 Theorem 2.1 (conjugation identity, equal support) from Corollary 2.3 (a combinatorial argument independent of it), and O16's identity is noted to hold for every rescaling of c, so it does not single out the conjugate pairing."
+  "notes": "Version 2.4.1. Bibliography only: prints the new title of O6 (Matrix-Level Dynamic Redundancy and a Conditional Upper Bound on the Cascade Exponent β) and, where cited, of O5 (Finite Character-Trace Saturation and the Limits of Vertex-Based Class-Function Cascades). No result is changed."
 }
