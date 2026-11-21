@@ -4,5 +4,5 @@
   "main_tex": "tex/SpectralO18.tex",
   "zenodo_id": 19321413,
   "doi": "10.5281/zenodo.19321413",
-  "notes": "Version 2.3 (alpha-1). Withdraws the reciprocal equality as a consequence of O6/O7: O6 proves only a conditional upper growth bound and supplies a countermodel to equality. The historical exponent range does not select the cascade rate. The adopted-action parity, response covariance, fixed-probe countermodel and open fibre-classification problem are unchanged. Reciprocal numerical values are retained only as explicitly defined legacy diagnostics."
+  "notes": "Version 2.3.1. The two sentences recalling O17 now state that O17's normalisation result is internal to its toy model: within that model any variation of r(c,q) would be a property of the normalisation; on the real O12/O13 pipeline O16 gives r = 1 within its contract. No result of the paper changes."
 }
