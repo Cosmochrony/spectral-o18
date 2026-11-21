@@ -7,15 +7,22 @@ fibre-identification problem left open by **O17** the Born–Infeld structure se
 > Parity acts on the Born–Infeld response family with the character $(-1)^k$ of the derivative order:
 > even-order responses are preserved, odd-order responses reversed. It does not, by itself, force the fibres of Π.
 
+**Version 2.4.** Theorem 3.1 (O17 Theorem 2.1 and Corollary 2.3) is restated within O17's toy model; on the real
+pipeline the equality $\delta_{q-c}=\delta_c$ for the exact block observable follows from O16's conjugate-block
+identity. O17's $r(c,q)$ statement is scoped to its toy model, and the historical value 7.44 is no longer
+attributed to O16.
+
 
 # Context
 
 **Version 2.3.** Withdraws the reciprocal-rate implication and its numerical-window selection.
 The action parity, response covariance, countermodel and open fibre-classification problem are unchanged.
 
-**O17** established that:
+**O17** established, within its own toy model, that:
 
-- conjugate Weil blocks $(c, q-c)$ carry identical dynamics
+- conjugate Weil blocks $(c, q-c)$ carry identical raw dynamics (on the real O12/O13 pipeline the
+  equality of conjugate exponents follows instead from O16's conjugate-block identity for the exact block
+  observable)
 - the pair observable
   $\sigma_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n)$
   is the correct pair-level observable
@@ -102,7 +109,8 @@ Using O17:
 # Status of the Pair-Level Programme
 
 - block-level observables (O12–O15): derived
-- pair dynamics $\delta_{q-c} = \delta_c$ (O17): derived
+- pair dynamics $\delta_{q-c} = \delta_c$: derived in O17's toy model for the raw counts; on the real
+  pipeline from O16's conjugate-block identity for the exact block observable
 - pair observable as fibre observable (O16–O18): **structurally motivated hypothesis**,
   spectrally supported, awaiting a solution of the fibre-identification problem
 

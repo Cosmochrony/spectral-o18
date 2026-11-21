@@ -4,5 +4,5 @@
   "main_tex": "tex/SpectralO18.tex",
   "zenodo_id": 19321413,
   "doi": "10.5281/zenodo.19321413",
-  "notes": "Version 2.3.1. The two sentences recalling O17 now state that O17's normalisation result is internal to its toy model: within that model any variation of r(c,q) would be a property of the normalisation; on the real O12/O13 pipeline O16 gives r = 1 within its contract. No result of the paper changes. The historical value 7.44 is no longer attributed to O16, which asserts no numerical exponent."
+  "notes": "Version 2.4. Theorem 3.1, which recalls O17 Theorem 2.1 and Corollary 2.3, is restated within O17's toy model: there the raw redundancy counts of c and q-c coincide, and O17 leaves the normalised exponents to the normalisation; on the real O12/O13 pipeline the equality delta_{q-c} = delta_c for the exact block observable follows instead from O16's conjugate-block identity. The sentences recalling O17's r(c,q) statement are scoped to its toy model, with r = 1 on the real pipeline's exact block observable (O16). The historical value 7.44 is no longer attributed to O16. The conjugation identity and the open fibre identification are unchanged."
 }
